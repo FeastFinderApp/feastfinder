@@ -10,7 +10,7 @@ const Home = () => {
       {/* Navbar Section */}
       <Navbar className="navbar">
         <Container>
-          <Navbar.Brand href="#home">Feast Finder</Navbar.Brand>
+          <Navbar.Brand href="#home" className='highlight_text' style={{ fontSize: '2rem' }}>Feast Finder</Navbar.Brand>
         </Container>
       </Navbar>
 
