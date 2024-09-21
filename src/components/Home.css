@@ -1,39 +1,44 @@
 .home {
     text-align: center;
-    padding: 20px;
+    background-color: #fff3ea;
   }
   
-  .hero {
-    /* background: url('/path-to-your-hero-image.jpg') no-repeat center center/cover; */
+  .main_page {
+    
+    background: url('../images/HomeFood.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #ff914d;
     text-align: center;
   }
   
-  .hero-content h1 {
+  .main_page-content {
+    height: 50vh;
+  }
+
+  .main_page-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
   }
   
-  .hero-content p {
+  .main_page-content p {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
   
-  .hero-btn {
+  .main_page-btn {
     padding: 10px 30px;
-    background-color: #ff6600;
+    background-color: #ff914d;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 1.2rem;
   }
   
-  .hero-btn:hover {
-    background-color: #e65500;
+  .main_page-btn:hover {
+    background-color: #ff600f;
   }
   
   .about, .services, .cta {
@@ -51,7 +56,7 @@
   
   .cta-btn {
     padding: 15px 30px;
-    background-color: #ff6600;
+    background-color: #ff600f;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -59,5 +64,9 @@
   }
   
   .cta-btn:hover {
-    background-color: #e65500;
+    background-color: #ff600f;
+  }
+
+  .navbar {
+    background: linear-gradient(to left, #ff600f, #ff914d); /* Adjust colors as needed */
   }
