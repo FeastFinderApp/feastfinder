@@ -1,4 +1,3 @@
-// src/components/404NotFound.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './404NotFound.css'; // Optional for custom styles
