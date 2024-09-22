@@ -16,6 +16,7 @@ import Login from "./components/Login";
 import LoginAdmin from "./components/LoginAdmin";
 import NotFound from "./components/404NotFound"; // Ensure this is a default export
 import "./components/Home.css";
+import "./components/GlobalStyle.css"
 
 function App() {
   return (
