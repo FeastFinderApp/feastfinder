@@ -1,4 +1,5 @@
 import React from "react";
+import './FAQ-page.css';
 
 const Faques = () => {
   return (
