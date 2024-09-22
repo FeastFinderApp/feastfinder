@@ -21,14 +21,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    backdrop-filter: blur(20px); /* Blur effect on the form's background */
+    backdrop-filter: blur(20px);
     animation: fadeInUp 0.3s ease-in forwards;
   }
   
   h1.login-admin-text {
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px rgb(0, 0, 0, 0.5); /* Adjust shadow effect */
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
   }
   
   .input-box {
@@ -39,10 +39,10 @@
   .input-box input {
     width: 100%;
     padding: 10px;
-    padding-left: 40px; /* Space for the icon */
+    padding-left: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background for inputs */
+    background: rgba(255, 255, 255, 0.9);
   }
   
   .icon {
@@ -50,10 +50,8 @@
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    color: #888; /* Icon color */
+    color: #888;
   }
-  
-  /* Additional styles if needed */
   
   button {
     width: 100%;
