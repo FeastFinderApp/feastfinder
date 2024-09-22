@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, NavLink } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/Home';
+import Home from './components/Home'; // Import the Home component
+import Navigation from './components/Navigation';
 import About from './components/About';
 import SampleResto from './components/SampleResto';
 import Login from './components/Login';
-import LoginAdmin from './components/LoginAdmin';
-import NotFound from './components/404NotFound';
+import LoginAdmin from './components/LoginAdmin'; // Ensure this path is correct
 import './components/Home.css';
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
         <Route path="/sample" element={<SampleResto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<LoginAdmin />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
