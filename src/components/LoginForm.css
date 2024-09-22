@@ -1,106 +1,105 @@
 .login-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fff3ea;
-    background-image: url("../images/login-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: RobotoSerif;
-    color: #fff3ea;
-    animation: fadeInUp 0.3s ease-in forwards;
-  }
-  
-  form {
-    background: transparent;
-    padding: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    backdrop-filter: blur(20px); /* Blur effect on the form's background */
-    animation: fadeInUp 0.3s ease-in forwards;
-  }
-  
-  h1.login-text {
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px rgb(0, 0, 0, 10); /* Adjust shadow effect */
-  }
-  
-  .input-box {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-  .input-box input {
-    width: 100%;
-    padding: 10px;
-    padding-left: 40px;
-    border: 1px solid #fff3ea;
-    border-radius: 4px;
-    background: #fff3ea;
-  }
-  
-  .icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #888;
-  }
-  
-  .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .remember-forgot label {
-    display: flex;
-    align-items: center;
-  }
-  
-  .remember-forgot input[type="checkbox"] {
-    margin-right: 8px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff914d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #ff600f;
-  }
-  
-  .register-link {
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  .register-link p {
-    margin: 0;
-  }
-  
-  .remember-forgot a,
-  .register-link a {
-    color: white;
-    transition: color 0.3s ease; 
-  }
-  
-  .remember-forgot a:hover,
-  .register-link a:hover {
-    color: #ff600f; 
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff3ea;
+  background-image: url("../images/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: RobotoSerif;
+  color: #fff3ea;
+  animation: fadeInUp 0.3s ease-in forwards;
+}
+
+form {
+  background: transparent;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(20px); /* Blur effect on the form's background */
+  animation: fadeInUp 0.3s ease-in forwards;
+}
+
+h1.login-text {
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgb(0, 0, 0, 10); /* Adjust shadow effect */
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  border: 1px solid #fff3ea;
+  border-radius: 4px;
+  background: #fff3ea;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff600f;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link p {
+  margin: 0;
+}
+
+.remember-forgot a,
+.register-link a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover,
+.register-link a:hover {
+  color: #ff600f;
+}
