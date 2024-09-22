@@ -7,7 +7,7 @@ import About from './components/About';
 import SampleResto from './components/SampleResto';
 import Login from './components/Login';
 import LoginAdmin from './components/LoginAdmin';
-import NotFound from './components/404NotFound'; // Import the 404 page
+import NotFound from './components/404NotFound';
 import './components/Home.css';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
         <Route path="/sample" element={<SampleResto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<LoginAdmin />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 errors */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

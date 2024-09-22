@@ -37,7 +37,7 @@ h1.login-text {
 .input-box input {
   width: 100%;
   padding: 10px;
-  padding-left: 40px; /* Space for the icon */
+  padding-left: 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: rgba(
