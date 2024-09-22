@@ -6,7 +6,8 @@ function Navigation(){
     return(
         <Navbar className="navbar">
         <Container>
-            <Navbar.Brand href="#home" className='highlight_text' style={{ fontSize: '2rem' }}>Feast Finder</Navbar.Brand>
+            <Navbar.Brand href="#home"><img src="assets/img/ff_logo.png" height="30rem" alt="FeastFinder"
+            /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
