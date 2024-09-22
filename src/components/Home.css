@@ -103,7 +103,7 @@ body {
 }
 
 .nav-link::after {
-  content: ''; /* Create an empty pseudo-element */
+  content: ""; /* Create an empty pseudo-element */
   position: absolute;
   left: 0;
   bottom: 0;
@@ -126,7 +126,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #fcd53a; /* Text color on hover */
+  color: #fcd53a; /* Text color on hover */
 }
 
 @font-face {

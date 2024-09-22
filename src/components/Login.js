@@ -11,11 +11,11 @@ const Login = () => {
         <h1 className="login-text">Login</h1>
         <div className="input-box">
           <input type="text" placeholder="Username" required />
-          <FaUser className="icon"/>
+          <FaUser className="icon" />
         </div>
         <div className="input-box">
           <input type="password" placeholder="Password" required />
-          <FaLock className="icon"/>
+          <FaLock className="icon" />
         </div>
 
         <div className="remember-forgot">
