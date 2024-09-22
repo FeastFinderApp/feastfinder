@@ -1,72 +1,162 @@
+body {
+  overflow: hidden; /* Prevents scrolling */
+  margin: 0;
+  background-color: #fff3ea;
+}
+
 .home {
-    text-align: center;
-    background-color: #fff3ea;
-  }
-  
-  .main_page {
-    background: url('../images/HomeFood.png') no-repeat center center/cover;
-    height: 100vh; /* Use 100vh to fit the height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ff600f;
-    text-align: center;
-    font-family: RobotoSerif;
-    font-weight: bolder;
-  }
-  
-  .main_page-content { /*adjusts content*/
-    height: 75vh;
-  }
+  text-align: center;
+  background-color: #fff3ea;
+}
 
-  .main_page-content h1 { /*adjusts content for h1*/
-    font-size: 5rem;
-    display: inline;
-  }
+.main_page {
+  background: url("../images/HomeFood.png") no-repeat center center/cover;
+  height: 100vh; /* Use 100vh to fit the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff600f;
+  text-align: center;
+  font-family: RobotoSerif;
+  font-weight: bolder;
+}
 
-  .highlight_text { /*highlight text class font*/
-    font-size: 5rem;
-    font-family: Karatula;
-  }
-  
-  .main_page-content p {  /*adjusts content bottom for p*/ 
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-bottom: 100px;
-  }
-  
-  .main_page-btn {
-    padding: 10px 60px;
-    background-color: #ff914d;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.5rem;
-  }
-  
-  .main_page-btn:hover {
-    background-color: #ff600f;
-  }
+.main_page-content {
+  /*adjusts content*/
+  height: 75vh;
+}
 
-  .navbar {
-    background: linear-gradient(to left, #ff600f, #ff914d); /* Adjust colors as needed */
-  }
+.main_page,
+.main_page-content h1,
+.highlight_text,
+.main_page-content p,
+.main_page-btn {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.3s ease-in forwards; /* Apply the fade-in-up animation */
+}
 
-  .navbar-brand {
-    color: white !important;    
-  }
+.main_page-content h1 {
+  /*adjusts content for h1*/
+  font-size: 5rem;
+  display: inline;
+}
 
-  @font-face {
-    font-family: RobotoSerif;
-    src: url(../fonts/RobotoSerif-Thin.ttf);
-  }
+.highlight_text {
+  /*highlight text class font*/
+  font-size: 5rem;
+  font-family: Karatula;
+}
 
-  @font-face {
-    font-family: Karatula;
-    src: url(../fonts/LL\ KARATULA\ 020721.otf);
-  }
+.main_page-content p {
+  /*adjusts content bottom for p*/
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
 
-  body {
-    overflow: hidden; /* Prevents scrolling */
-    margin: 0;
+.main_page-btn {
+  padding: 10px 60px;
+  background-color: #ff914d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease-in; /* Ease-in effect for hover */
+}
+
+.main_page-btn:hover {
+  background-color: #ff600f;
+}
+
+.navbar {
+  background: linear-gradient(
+    to left,
+    #ff600f,
+    #ff914d
+  ); /* Adjust colors as needed */
+  animation: slideInDown 0.3s ease-out;
+}
+
+.navbar-brand {
+  font-family: Karatula;
+  font-size: 2em;
+  color: white !important;
+  transition: color 1s ease;
+}
+
+.navbar-brand:hover {
+  transition: all 0.3s ease;
+  color: yellow !important;
+}
+
+.nav-link {
+  color: white; /* Default text color */
+  font-size: 1.2em;
+  margin-right: 15px;
+  font-family: RobotoSerif;
+  font-weight: bolder;
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* For positioning the underline */
+  display: inline-block; /* Ensure the underline fits the text width */
+  overflow: hidden; /* Prevent the pseudo-element from overflowing */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions for color and underline */
+}
+
+.nav-link::after {
+  content: ''; /* Create an empty pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Match the width of the text */
+  height: 3px; /* Thickness of the underline */
+  background-color: #fcd53a; /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Animate from right to left */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+.nav-link.active {
+  color: #fcd53a !important; /* Color of active link */
+  border-bottom: 3px solid #fcd53a; /* Ensure underline matches active color */
+  padding-bottom: 1px; /* Space between text and underline */
+}
+
+.nav-link:hover {
+    color: #fcd53a; /* Text color on hover */
+}
+
+@font-face {
+  font-family: RobotoSerif;
+  src: url(../fonts/RobotoSerif-Thin.ttf);
+}
+
+@font-face {
+  font-family: Karatula;
+  src: url(../fonts/LL\ KARATULA\ 020721.otf);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts from 20px below the final position */
   }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Ends at the original position */
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
