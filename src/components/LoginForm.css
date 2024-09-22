@@ -40,9 +40,9 @@ h1.login-text {
   width: 100%;
   padding: 10px;
   padding-left: 40px;
-  border: 1px solid #fff3ea;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background: #fff3ea;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .icon {
