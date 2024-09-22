@@ -1,7 +1,7 @@
 import React from "react";
-import './FAQ-page.css';
+import './FAQ.css';
 
-const Faques = () => {
+const FAQ = () => {
   return (
     <div>
       {/* FAQ Page */}
@@ -22,4 +22,4 @@ const Faques = () => {
   );
 };
 
-export default Faques;
+export default FAQ;

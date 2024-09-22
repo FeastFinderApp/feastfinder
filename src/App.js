@@ -10,7 +10,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import About from "./components/About";
-import Faques from "./components/FAQ-page";
+import Faques from "./components/FAQ";
 import SampleResto from "./components/SampleResto";
 import Login from "./components/Login";
 import LoginAdmin from "./components/LoginAdmin";
@@ -39,6 +39,13 @@ function App() {
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
+                  to="/sample"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Sample
+                </Nav.Link>
+                <Nav.Link
+                  as={NavLink}
                   to="/about"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
@@ -46,17 +53,10 @@ function App() {
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
-                  to="/sample"
+                  to="/faq"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  FAQ Page
-                </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/sample"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Sample
+                  FAQ
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
