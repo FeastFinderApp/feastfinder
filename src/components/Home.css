@@ -90,20 +90,43 @@ body {
 }
 
 .nav-link {
-  color: white;
+  color: white; /* Default text color */
   font-size: 1.2em;
   margin-right: 15px;
   font-family: RobotoSerif;
   font-weight: bolder;
   text-decoration: none; /* Remove default underline */
   position: relative; /* For positioning the underline */
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  display: inline-block; /* Ensure the underline fits the text width */
+  overflow: hidden; /* Prevent the pseudo-element from overflowing */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions for color and underline */
+}
+
+.nav-link::after {
+  content: ''; /* Create an empty pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Match the width of the text */
+  height: 3px; /* Thickness of the underline */
+  background-color: #fcd53a; /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Animate from right to left */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+.nav-link.active {
+  color: #fcd53a !important; /* Color of active link */
+  border-bottom: 3px solid #fcd53a; /* Ensure underline matches active color */
+  padding-bottom: 1px; /* Space between text and underline */
 }
 
 .nav-link:hover {
-  color: #fcd53a;
-  border-bottom: 3px solid #fcd53a; /* Underline*/
-  padding-bottom: 1px; /* Space between text and underline */
+    color: #fcd53a; /* Text color on hover */
 }
 
 @font-face {
