@@ -1,19 +1,8 @@
 import React from 'react';
 import './Home.css'; // For custom styles, if needed
-import { Container, Navbar } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 const Home = () => {
   return (
-    <>
-      {/* Navbar Section */}
-      <Navbar className="navbar">
-        <Container>
-          <Navbar.Brand href="#home" className='highlight_text' style={{ fontSize: '2rem' }}>Feast Finder</Navbar.Brand>
-        </Container>
-      </Navbar>
-
       <div className="home">
         <section className="main_page">
           <div className="main_page-content">
@@ -23,7 +12,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-    </>
   );
 }
 
