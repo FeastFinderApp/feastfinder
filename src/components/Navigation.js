@@ -18,6 +18,9 @@ function Navigation() {
             <Nav.Link as={Link} to="about">
               About
             </Nav.Link>
+            <Nav.Link as={Link} to="faq">
+              FAQs
+            </Nav.Link>
             <Nav.Link as={Link} to="sample">
               Sample
             </Nav.Link>
