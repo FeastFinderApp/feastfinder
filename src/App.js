@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home'; // Import the Home component
-
+import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="App">
-
+    <div>
+      <Nav />
       <Home />
       {/* Other components like Footer can go here */}
     </div>
