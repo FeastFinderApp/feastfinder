@@ -2,38 +2,121 @@
     height: 100vh;
     font-family: 'Roboto Serif', sans-serif;
 }
+
 #restoRow {
     height: 100%;
 }
+
 #cartContainer {
     background-color: #FFF2DF;
     padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
 }
+
+#Products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 50%;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    gap: 1rem;
+}
+
+.ProductCard {
+    width: 14rem;
+    height: auto;
+    margin: 0;
+}
+
+.ProductCard .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+}
+
+.ProductCard .card-title {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.ProductCard .card-text {
+    margin-top: auto;
+}
+
+.addProductButton {
+    background-color: #ff600f;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.addProductButton:hover {
+    background-color: #e55d00;
+    transform: scale(1.05);
+}
+
+#Menu {
+    background-color: #FFE6C7;
+    padding: 2rem; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 25%;
+}
+
+#Menu th {
+    background-color: #ff600f;
+    width: 300px;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+#Menu tr {
+    font-size: 25px;
+}
+
 h1 {
     font-weight: 600;
 }
-.cartItem{
+
+.cartItem {
     margin: 1rem 0rem;
 }
+
 .cartDescription {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 0.25rem;
 }
+
 .cartItemName {
     font-weight: 400;
 }
+
 .cartCategoryName {
     font-weight: 600;
 }
+
 .cartPrice {
     font-weight: 600;
     color: #408000;
 }
-.qty{
+
+.qty {
     display: flex;
 }
+
 .qty button {
     background-color: transparent;
     border: 2px solid black;
@@ -43,6 +126,7 @@ h1 {
     color: black;
     line-height: 0.5rem;
 }
+
 .qtyCount {
     background-color: white;
     border: 2px solid black;
@@ -50,5 +134,4 @@ h1 {
     width: 4rem;
     margin: 0rem 1rem;
     text-align: center;
-    
 }
