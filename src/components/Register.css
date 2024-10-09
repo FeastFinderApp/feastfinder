@@ -1,0 +1,83 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    font-family: RobotoSerif; /* Apply the RobotoSerif font */
+    background-image: url("../images/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff3ea;
+  }
+  
+  .register-container {
+    background: transparent; /* Make background transparent */
+    width: 100%;
+    max-width: 400px; /* Match the max width from the other form */
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Match border style */
+    border-radius: 8px; /* Rounded corners like login form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(20px); /* Apply blur effect */
+  }
+
+  h1.register-text {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 10); /* Adjust shadow effect */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white; /* Label text white for better contrast on background */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px; /* Match the padding from login form */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9); /* Similar to the transparent input box style */
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff914d; /* Matching button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for consistency */
+  }
+  
+  button:hover {
+    background-color: #ff600f; /* Matching hover effect */
+  }
+  
+  .admin-register-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .admin-register-link a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .admin-register-link a:hover {
+    color: #ff600f; /* Matching hover effect */
+  }
+  
