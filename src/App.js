@@ -15,6 +15,7 @@ import SampleResto from "./components/SampleResto";
 import Login from "./components/Login";
 import LoginAdmin from "./components/LoginAdmin";
 import NotFound from "./components/404NotFound"; // Ensure this is a default export
+import Register from "./components/Register";
 import "./components/Home.css";
 import "./components/GlobalStyle.css"
 
@@ -84,6 +85,7 @@ function App() {
           <Route path="/sample" element={<SampleResto />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<LoginAdmin />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
