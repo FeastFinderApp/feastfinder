@@ -16,6 +16,7 @@ import Login from "./components/Login";
 import LoginAdmin from "./components/LoginAdmin";
 import NotFound from "./components/404NotFound"; // Ensure this is a default export
 import Register from "./components/Register";
+import UserProfile from "./components/UserProfile";
 import "./components/Home.css";
 import "./components/GlobalStyle.css"
 
@@ -86,6 +87,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<LoginAdmin />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<UserProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
