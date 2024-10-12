@@ -1,39 +1,77 @@
 /* Basic reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .profile-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    margin: 50px auto;
-    text-align: center;
-  }
-  
-  .profile-info {
-    margin-top: 20px;
-  }
-  
-  .profile-item {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  span {
-    display: block;
-    margin-top: 5px;
-    color: #555;
-    font-size: 16px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+.profile-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Profile photo section */
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo-placeholder {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-photo-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+/* Profile info section */
+.profile-info {
+  margin-top: 20px;
+}
+
+.profile-item {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+span {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Additional styling for better layout */
+input[type="file"] {
+  margin-top: 10px;
+  font-size: 14px;
+}
