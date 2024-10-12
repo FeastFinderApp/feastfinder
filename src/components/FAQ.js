@@ -13,6 +13,20 @@ const FAQ = () => {
             Compared to similar platforms, there's less requirements needed to use our services for menu making. Other platforms require a subscription or partnership, and we aim to not hassle restaurant owners with requirements such as those.
           </p>
         </div>
+
+        <div>
+          <h2>Where can we contact you?</h2>
+          <p>
+           You may contact us via the contacts provided below. 
+          </p>
+        </div>
+
+        <div>
+          <h1> Contact Us </h1>
+        <li> Email - samplemail.gmail.Com</li>
+        <li> Contact Number - 0912345678</li>
+        </div>
+        
       </section>
     </div>
   );
