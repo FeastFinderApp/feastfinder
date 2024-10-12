@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './UserProfile.css';
+import "./UserProfile.css";
 
 const UserProfile = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -16,11 +16,15 @@ const UserProfile = () => {
   return (
     <div className="profile-container">
       <h1>User Profile</h1>
-      
+
       {/* User Photo Section */}
       <div className="profile-photo">
         {selectedImage ? (
-          <img src={selectedImage} alt="User Profile" className="profile-photo-preview" />
+          <img
+            src={selectedImage}
+            alt="User Profile"
+            className="profile-photo-preview"
+          />
         ) : (
           <div className="profile-photo-placeholder">No photo uploaded</div>
         )}
@@ -29,23 +33,23 @@ const UserProfile = () => {
 
       <div className="profile-info">
         <div className="profile-item">
-          <label>Username:</label>
-          <span>Pogi_si_Mark_123</span>   {/* placeholder */}
+          <label className="pflabel">Username:</label>
+          <span>Pogi_si_Mark_123</span> {/* placeholder */}
         </div>
 
         <div className="profile-item">
-          <label>Bio:</label>
-          <span>Yes I am Mark.</span>   {/* placeholder */}
+          <label className="pflabel">Bio:</label>
+          <span>Yes I am Mark.</span> {/* placeholder */}
         </div>
 
         <div className="profile-item">
-          <label>Contact Info:</label>
-          <span>maruko@example.com</span>   {/* placeholder */}
+          <label className="pflabel">Contact Info:</label>
+          <span>maruko@example.com</span> {/* placeholder */}
         </div>
 
         <div className="profile-item">
-          <label>Account Info:</label>
-          <span>Premium User since 2024</span>   {/* placeholder */}
+          <label className="pflabel">Account Info:</label>
+          <span>Premium User since 2024</span> {/* placeholder */}
         </div>
       </div>
     </div>
