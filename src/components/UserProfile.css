@@ -62,6 +62,8 @@ input[type="file"] {
 
 label {
   font-weight: bold;
+}
+.pflabel{
   color: black;
 }
 
