@@ -13,7 +13,6 @@ import About from "./components/About";
 import Faques from "./components/FAQ";
 import SampleResto from "./components/SampleResto";
 import Login from "./components/Login";
-import LoginAdmin from "./components/LoginAdmin";
 import NotFound from "./components/404NotFound"; // Ensure this is a default export
 import Register from "./components/Register";
 import UserProfile from "./components/UserProfile";
@@ -67,13 +66,6 @@ function App() {
                 >
                   Login
                 </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/admin"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Admin
-                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -85,7 +77,6 @@ function App() {
           <Route path="/faq" element={<Faques />} />
           <Route path="/sample" element={<SampleResto />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<LoginAdmin />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="*" element={<NotFound />} />
