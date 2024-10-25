@@ -1,20 +1,54 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./LoginForm.css"; // For custom styles, if needed
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { FaUser, FaLock } from "react-icons/fa";
+import "./LoginForm.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/login", {
+        username,
+        password,
+      });
+      if (response.status === 200) {
+        // Redirect to /profile on success
+        alert("Successfully Logged in!");
+        navigate("/profile");
+      }
+    } catch (error) {
+      console.error("Login failed:", error.response.data.message);
+      alert("Invalid username or password");
+    }
+  };
+
   return (
     <div className="login-wrapper">
-      <form>
+      <form onSubmit={handleLogin}>
         <h1 className="login-text">Login</h1>
         <div className="input-box">
-          <input type="text" placeholder="Username" required />
+          <input
+            type="text"
+            placeholder="Username"
+            required
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
           <FaUser className="icon" />
         </div>
         <div className="input-box">
-          <input type="password" placeholder="Password" required />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <FaLock className="icon" />
         </div>
 

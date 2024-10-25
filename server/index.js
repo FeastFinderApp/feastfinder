@@ -4,11 +4,12 @@ const connectDB = require('./data/db');
 const fs = require('fs'); // Import fs to read files
 const app = express();
 const PORT = 5000;
-
+const userRoutes = require('./routes/user');
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // To handle JSON data
+app.use(express.json()); // for parsing application/json
+app.use('/', userRoutes); // Or use '/api' or something similar
 
 // Restaurant routes
 const restos = require('./data/restos');
