@@ -4,8 +4,7 @@ const connectDB = require('./data/db');
 const fs = require('fs'); // Import fs to read files
 const app = express();
 const PORT = 5000;
-// User routes
-app.use('/api/users', require('./routes/user'));
+
 
 // Middleware
 app.use(cors());
