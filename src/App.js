@@ -10,7 +10,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import About from "./components/About";
-import Faques from "./components/FAQ";
+import FAQSupport from "./components/FAQSupport";
 import SampleResto from "./components/SampleResto";
 import Login from "./components/Login";
 import NotFound from "./components/404NotFound"; // Ensure this is a default export
@@ -57,7 +57,7 @@ function App() {
                   to="/faq"
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  FAQ
+                  FAQSupport
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
@@ -74,7 +74,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<Faques />} />
+          <Route path="/faq" element={<FAQSupport />} />
           <Route path="/sample" element={<SampleResto />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
