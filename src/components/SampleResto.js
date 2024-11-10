@@ -4,20 +4,15 @@ import CartItem from "./CartItem";
 import CartCategory from "./CartCategory";
 import './Restaurant.css'
 import Card from 'react-bootstrap/Card';
-import img1 from '../images/Products/1.jpg';
-import img2 from '../images/Products/2.jpg';
-import img3 from '../images/Products/3.jpg';
-import img4 from '../images/Products/4.png';
-import img5 from '../images/Products/5.png';
-import img6 from '../images/Products/6.jpg';
+import ProductCard from "./ProductCard";
 
 const cardData = [
-    { title: "Bottomless Tostada Chips", text: "P395.00", imgSrc: img1 },
-    { title: "Calamari", text: "P420.00", imgSrc: img2 },
-    { title: "Classic Nachos", text: "P325.00", imgSrc: img3 },
-    { title: "Skillet Queso", text: "P440.00", imgSrc: img4 },
-    { title: "Southwestern Eggrolls", text: "P350.00", imgSrc: img5 },
-    { title: "Spiced Onion Rings", text: "P275.00", imgSrc: img6 },
+    { title: "Bottomless Tostada Chips", text: "P395.00", imgSrc: "1.jpg" },
+    { title: "Calamari", text: "P420.00", imgSrc: "2.jpg" },
+    { title: "Classic Nachos", text: "P325.00", imgSrc: "3.jpg" },
+    { title: "Skillet Queso", text: "P440.00", imgSrc: "4.png" },
+    { title: "Southwestern Eggrolls", text: "P350.00", imgSrc: "5.png" },
+    { title: "Spiced Onion Rings", text: "P275.00", imgSrc: "6.jpg" },
     { title: "Product A", text: "Product Price", imgSrc: "" },
     { title: false, text: false, imgSrc: false, button: true},
 ];
@@ -52,25 +47,13 @@ function SampleResto(){
                 </table>
                 </Col>
                 <Col xs={12} md={6} id="Products">
-                    <h1>Products</h1>                   
-                    <Row xs={2} md={3} className="Products">
+                    <h1>Products</h1>
+                    <br />
+                    <div id="productsContainer">
                         {cardData.map((card, idx) => (
-                            <Col key={idx} className="mb-3">  
-                                <Card className="ProductCard" border="warning">
-                                    <Card.Header>
-                                        <Card.Img variant="top" src={card.imgSrc} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                                    </Card.Header>
-                                    <Card.Body>
-                                        <Card.Title>{card.title}</Card.Title>
-                                        <Card.Text>{card.text}</Card.Text>
-                                        {card.button && (
-                                            <Button className="addProductButton">ADD PRODUCT</Button>
-                                        )}
-                                    </Card.Body>
-                                </Card>
-                            </Col> 
+                            <ProductCard imgSrc={`assets/img/products/${card.imgSrc}`} title={card.title} text={card.text} key={idx} className="ProductCard"/>
                         ))}
-                    </Row>
+                    </div>
                 </Col>
                 <Col xs={12} md={3} id="cartContainer">
                     <h1>Cart</h1>

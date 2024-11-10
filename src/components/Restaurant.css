@@ -16,15 +16,24 @@
 }
 
 #Products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     margin-bottom: 2rem;
     padding: 2rem;
-    width: 50%;
     height: calc(100vh - 120px);
     overflow-y: auto;
+    /*display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+
+    width: 50%;
+
+    gap: 1rem;
+    flex-direction: row;*/
+}
+
+#productsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    grid-gap: 2rem;
 }
 
 .ProductCard {
