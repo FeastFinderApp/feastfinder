@@ -18,13 +18,14 @@
 #Products {
     margin-bottom: 2rem;
     padding: 2rem;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
     /*display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 
     width: 50%;
-    height: calc(100vh - 120px);
-    overflow-y: auto;
+
     gap: 1rem;
     flex-direction: row;*/
 }
