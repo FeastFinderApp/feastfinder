@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CartItem from "./CartItem";
 import CartCategory from "./CartCategory";
 import './Restaurant.css'
 import Card from 'react-bootstrap/Card';
 import ProductCard from "./ProductCard";
+import axios from "axios";
 
 const cardData = [
     { title: "Bottomless Tostada Chips", text: "P395.00", imgSrc: "1.jpg" },
@@ -18,6 +19,18 @@ const cardData = [
 ];
 
 function SampleResto(){
+    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        const fetchCart = async () => {
+            try {
+                const result = await axios.get('http://localhost:5000/api/cartitems/listcart');
+                setCart(result.data);
+            } catch (error) {
+                console.error('Error fetching FAQs:', error);
+            }
+        };
+        fetchCart();
+    }, []);
     return(
         <Container id="restoContainer" fluid>
             <Row id="restoRow">
@@ -57,8 +70,9 @@ function SampleResto(){
                 </Col>
                 <Col xs={12} md={3} id="cartContainer">
                     <h1>Cart</h1>
-                        <CartItem name="Bottomless Tostada Chips and Salsa" price="P790.00" />
-                        <CartItem name="Spiced Onion Rings" price="P825.00" />
+                    {cart.map((cartitem, idx) => (
+                        <CartItem name={cartitem.name} price={`P${cartitem.price}.00`} quantity={cartitem.quantity}/>
+                    ))}
                     <br />
                         <CartCategory name="Subtotal" price="P1615.00" />
                         <CartCategory name="Delivery Fee" price="P40.00" />

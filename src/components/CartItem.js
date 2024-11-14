@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 function CartItem(props) {
     const [count, setCount] = useState(0);
+    useEffect(() => {
+        setCount(props.quantity);
+    }, []);
+
     return(
         <div class="cartItem">
             <div class="cartDescription">

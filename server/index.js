@@ -36,7 +36,9 @@ app.get('/:resto/products', (req, res) => {
 connectDB();
 
 // User routes
+app.use('/api/cartitems', require('./routes/cartitem'));
 app.use('/api/users', require('./routes/user'));
+
 
 // Listen on the port
 app.listen(PORT, () => {
