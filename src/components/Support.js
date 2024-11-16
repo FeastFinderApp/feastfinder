@@ -1,24 +1,11 @@
-// src/components/FAQSupport.js
+// src/components/Support.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './FAQSupport.css';
+import './Support.css';
 
 const FAQSupport = () => {
-    const [faqs, setFaqs] = useState([]);
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [responseMessage, setResponseMessage] = useState('');
-
-    useEffect(() => {
-        const fetchFAQs = async () => {
-            try {
-                const result = await axios.get('http://localhost:5000/api/faqs');
-                setFaqs(result.data);
-            } catch (error) {
-                console.error('Error fetching FAQs:', error);
-            }
-        };
-        fetchFAQs();
-    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -38,16 +25,6 @@ const FAQSupport = () => {
 
     return (
         <div>
-            <h1>FAQ</h1>
-            <ul>
-                {faqs.map((faq, index) => (
-                    <li key={index}>
-                        <strong>{faq.question}</strong><br />
-                        {faq.answer}
-                    </li>
-                ))}
-            </ul>
-
             <h2>Customer Support</h2>
             <form onSubmit={handleSubmit}>
                 <input
