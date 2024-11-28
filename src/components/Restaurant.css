@@ -45,7 +45,6 @@
 .ProductCard .card-body {
     display: flex;
     flex-direction: column;
-    height: 120px;
 }
 
 .ProductCard .card-title {

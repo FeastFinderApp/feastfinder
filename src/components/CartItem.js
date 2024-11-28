@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react";
 
 function CartItem(props) {
     const [count, setCount] = useState(0);
-    useEffect(() => {
+    /*useEffect(() => {
         setCount(props.quantity);
-    }, []);
+    }, [props.quantity]);*/
 
     return(
         <div className="cartItem">
