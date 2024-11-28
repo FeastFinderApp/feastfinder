@@ -8,27 +8,25 @@ import ProductCard from "./ProductCard";
 import axios from "axios";
 
 const cardData = [
-    { title: "Bottomless Tostada Chips", text: "P395.00", imgSrc: "1.jpg" },
-    { title: "Calamari", text: "P420.00", imgSrc: "2.jpg" },
-    { title: "Classic Nachos", text: "P325.00", imgSrc: "3.jpg" },
-    { title: "Skillet Queso", text: "P440.00", imgSrc: "4.png" },
-    { title: "Southwestern Eggrolls", text: "P350.00", imgSrc: "5.png" },
-    { title: "Spiced Onion Rings", text: "P275.00", imgSrc: "6.jpg" },
-    { title: "Product A", text: "Product Price", imgSrc: "" },
-    { title: false, text: false, imgSrc: false, button: true},
+    { title: "Bottomless Tostada Chips", text: 395.00, imgSrc: "1.jpg" },
+    { title: "Calamari", text: 420.00, imgSrc: "2.jpg" },
+    { title: "Classic Nachos", text: 325.00, imgSrc: "3.jpg" },
+    { title: "Skillet Queso", text: 440.00, imgSrc: "4.png" },
+    { title: "Southwestern Eggrolls", text: 350.00, imgSrc: "5.png" },
+    { title: "Spiced Onion Rings", text: 275.00, imgSrc: "6.jpg" },
 ];
 
 function SampleResto(){
     const [cart, setCart] = useState([]);
+    const fetchCart = async () => {
+        try {
+            const result = await axios.get('http://localhost:5000/api/cartitems/listcart');
+            setCart(result.data);
+        } catch (error) {
+            console.error('Error fetching cart:', error);
+        }
+    };
     useEffect(() => {
-        const fetchCart = async () => {
-            try {
-                const result = await axios.get('http://localhost:5000/api/cartitems/listcart');
-                setCart(result.data);
-            } catch (error) {
-                console.error('Error fetching FAQs:', error);
-            }
-        };
         fetchCart();
     }, []);
     return(
@@ -71,7 +69,7 @@ function SampleResto(){
                 <Col xs={12} md={3} id="cartContainer">
                     <h1>Cart</h1>
                     {cart.map((cartitem, idx) => (
-                        <CartItem name={cartitem.name} price={`P${cartitem.price}.00`} quantity={cartitem.quantity}/>
+                        <CartItem key={idx} name={cartitem.name} price={`P${cartitem.price}`} quantity={cartitem.quantity} fetchCart={fetchCart}/>
                     ))}
                     <br />
                         <CartCategory name="Subtotal" price="P1615.00" />

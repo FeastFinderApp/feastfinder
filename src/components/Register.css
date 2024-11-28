@@ -8,7 +8,7 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 60px);
-    font-family: RobotoSerif; 
+    font-family: RobotoSerif, sans-serif;
     background-image: url("../images/login-bg.jpg");
     background-size: cover;
     background-position: center;
